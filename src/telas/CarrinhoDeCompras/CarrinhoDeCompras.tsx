@@ -34,8 +34,8 @@ function CarrinhoDeComprasScreen({ navigation }) {
         keyExtractor={(item, index) => index.toString()}
       />
 
-      <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Mercado')}>
-        <Text style={{ color: 'black' }}>ADICIONAR PRODUTO</Text>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Mercado')}>
+        <Text style={styles.buttonText}>ADICIONAR PRODUTO</Text>
       </TouchableOpacity>
     </View>
   );
@@ -50,16 +50,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 20,
       },
-      btn: {
-        borderWidth: 1,
-        height: 50,
-        width: '100%',
-        borderRadius: 15,
+      button: {
         backgroundColor: 'dodgerblue',
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 10,
-      },
+        borderRadius: 15,
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        marginTop: 20,
+        width:'40%'
+    },
+    buttonText: {
+        flex:1,
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        alignItems:'center',
+        justifyContent:'center'
+    },
       itemContainer: {
         width: '100%',
         borderWidth: 1,
@@ -69,5 +75,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginVertical: 5,
         paddingHorizontal: 10,
+        backgroundColor:'#fff'
       }
     });

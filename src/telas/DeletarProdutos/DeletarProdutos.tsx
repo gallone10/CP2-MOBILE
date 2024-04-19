@@ -21,8 +21,8 @@ function DeletarProdutosScreen({ route, navigation }) {
         <Text style={{ fontSize: 18 }}>QUANTIDADE: {produto.quantidade}</Text>
         <Text style={{ fontSize: 18 }}>PREÇO: {produto.preco}</Text>
   
-        <TouchableOpacity style={styles.btnDelete} onPress={deletarProduto}>
-          <Text style={{ color: 'black' }}>EXCLUIR</Text>
+        <TouchableOpacity style={styles.button} onPress={deletarProduto}>
+          <Text style={styles.buttonText}>EXCLUIR</Text>
         </TouchableOpacity>
       </View>
     );
@@ -31,15 +31,27 @@ function DeletarProdutosScreen({ route, navigation }) {
 export default DeletarProdutosScreen;
 
 const styles = StyleSheet.create({
-    btnDelete: {
+    
+      button: {
         backgroundColor: 'red',
-        borderRadius: 12,
-        width: 100,
+        borderRadius: 15,
+        paddingVertical: 12,
+        paddingHorizontal: 20,
+        marginTop: 20,
+        width:'20%',
         height: 25,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 10,
-      },
+    },
+    buttonText: {
+        flex:1,
+        color: 'white',
+        fontSize: 16,
+        fontWeight: 'bold',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+
       container: {
         flex: 1,
         backgroundColor: 'indianred',
